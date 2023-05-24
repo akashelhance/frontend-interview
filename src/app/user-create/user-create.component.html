@@ -1,0 +1,58 @@
+<div class="container custom-container">
+    <div class="col-md-12">
+        <div class="container">
+            <h3 class="mb-3 text-center p-4">Create User</h3>
+            <div class="row my-3">
+                <div class="col">
+                    <label for="First Name" class="form-label">First Name</label>
+                    <input type="text" [(ngModel)]="userDetails.firstName" class="form-control"
+                        placeholder="First Name" required>
+                </div>
+            </div>
+
+            <div class="row my-3">
+                <div class="col">
+                    <label for="First Name" class="form-label">Last Name</label>
+                    <input type="text" [(ngModel)]="userDetails.lastName" class="form-control" placeholder="Last Name" required>
+                </div>
+            </div>
+
+            <div class="row my-3">
+                <div class="col">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" [(ngModel)]="userDetails.email" class="form-control"
+                        placeholder="example@gmail.com"required >
+                </div>
+            </div>
+
+            <div class="row my-3">
+                <div class="col">
+                    <label for="Phone" class="form-label">Phone</label>
+                    <input type="text" [(ngModel)]="userDetails.phone" class="form-control" placeholder="9879879871" required >
+                </div>
+            </div>
+
+
+            <div class="row my-3">
+                <div class="col">
+                    <label for="address" class="form-label">Address</label>
+                    <input type="text" [(ngModel)]="userDetails.address" class="form-control" placeholder="Ghaziabad" required>
+                </div>
+            </div>
+
+
+            <div class="row my-3">
+                <div class="col">
+                    <label for="company" class="form-label">Company</label>
+                    <input type="text" [(ngModel)]="userDetails.company" class="form-control" placeholder="TCS" required>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <button class="btn btn-success btn-lg btn-block" (click)="addUser(userDetails)">Create user</button>
+            </div>
+
+        </div>
+    </div>
+</div>

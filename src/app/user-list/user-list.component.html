@@ -1,0 +1,57 @@
+
+<div class="container custom-container-2">
+    
+    <div class="no-data text-center" *ngIf="userlist">
+
+        <p>There is no user added yet!</p>
+        <button class="btn btn-outline-primary" routerLink="/create-user">
+            Add User
+        </button>
+    </div>
+
+
+    <div class="container mt-3">
+        
+
+
+        <table *ngIf="!userlist" class="table table-bordered">
+
+            <thead>
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Address</th>
+                    <th>Company</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of User">
+                    <td>{{user.firstName}}</td>
+                    <td>{{user.lastName}}</td>
+                    <td>{{user.email}}</td>
+                    <td>{{user.phone}}</td>
+                    <td>{{user.address}}</td>
+                    <td>{{user.company}}</td>
+                    <td>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <button type="button" routerLink="/user-edit/{{ user.id }}" class="btn btn-primary">Edit</button>
+
+                            </div>
+
+                            <div class="col-lg-6">
+                                <button type="button" class="btn btn-primary" (click)="deleteUser(user.id)">Delete</button>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+
+</div>
